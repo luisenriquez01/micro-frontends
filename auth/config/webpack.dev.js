@@ -11,6 +11,9 @@ const devConfig = {
 			index: "/index.html",
 		},
 	},
+	output: {
+		publicPath: "http://localhost:8082/",
+	},
 	plugins: [
 		new ModuleFederationPlugin({
 			name: "auth",
