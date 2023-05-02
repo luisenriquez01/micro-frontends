@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { mount } from "marketing/MarketingLandingPage";
+import { mount } from "auth/AuthApp";
 import { useHistory } from "react-router-dom";
 
-export default function MarketingLandingPage() {
+export default function AuthApp() {
 	const ref = useRef(null);
 	const history = useHistory();
 

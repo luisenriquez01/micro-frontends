@@ -1,6 +1,7 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { createGenerateClassName, StylesProvider } from "@material-ui/core/styles";
+import AuthApp from "./components/AuthApp";
 import MarketingLandingPage from "./components/MarketingLandingPage";
 import Header from "./components/Header";
 
@@ -13,7 +14,10 @@ export default function App() {
 		<BrowserRouter>
 			<StylesProvider generateClassName={genetateClassName}>
 				<Header />
-				<MarketingLandingPage />
+				<Switch>
+					<Route path="/auth" component={AuthApp} />
+					<Route path="/" component={MarketingLandingPage} />
+				</Switch>
 			</StylesProvider>
 		</BrowserRouter>
 	);
