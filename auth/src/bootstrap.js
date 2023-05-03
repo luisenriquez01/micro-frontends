@@ -3,14 +3,14 @@ import ReactDOM from "react-dom";
 import { createBrowserHistory, createMemoryHistory } from "history";
 import App from "./App";
 
-export const mount = (el, { defaultHistory, initialPath, onNavigate }) => {
+export const mount = (el, { defaultHistory, initialPath, onNavigate, onSignIn }) => {
 	const history =
 		defaultHistory ||
 		createMemoryHistory({
 			initialEntries: [initialPath],
 		});
 	onNavigate && history.listen(onNavigate);
-	ReactDOM.render(<App history={history} />, el);
+	ReactDOM.render(<App history={history} onSignIn={onSignIn} />, el);
 
 	return {
 		onParentNavigate: (location) => {
