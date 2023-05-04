@@ -65,7 +65,7 @@ export default function Header({ isSignedIn, onSignOut }) {
 			<AppBar position="static" color="default" elevation={0} className={classes.appBar}>
 				<Toolbar className={classes.toolbar}>
 					<Typography variant="h6" color="inherit" noWrap component={RouterLink} to="/">
-						App
+						Container App
 					</Typography>
 					<Button
 						color="primary"
